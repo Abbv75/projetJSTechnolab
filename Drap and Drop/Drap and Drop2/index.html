@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drap and Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- les elements a gauche-->
+        <div class="left"> 
+            <div class="item">
+                <img src="img1.png" alt="" ondragstart="drag(event)">
+            </div>
+            <div class="item">
+                <img src="img2.png" alt="" ondragstart="drag(event)">
+            </div>
+            <div class="item">
+                <img src="img3.png" alt="" ondragstart="drag(event)">
+            </div>
+            <div class="item">
+                <img src="img4.png" alt="" ondragstart="drag(event)">
+            </div>
+        </div>
+        <!-- Les elements a droite-->
+        <div class="right">
+            <div class="mockup">
+                <!-- le carre a l'interieur du tsirt-->
+                <div class="graphic"
+                    ondrop="drop(event)" 
+                    ondragover="allowDrop(event)"
+                ></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

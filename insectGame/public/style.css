@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+
+    h2{
+        font-size: 1.5px 
+
+    }
+    @media only screen and (min-width: 600px) {
+        h2{
+            font-size: 20px
+        }
+
+        
+    }
+
+    h2{
+        position: relative;
+        font-size: 10vw;
+        -webkit-text-stroke: 0.3vw #383d52;
+        color:#fff;
+        text-transform: uppercase;
+       
+    
+    }
+    
+     h2::before{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        
+        color: #03a9f4;
+        -webkit-text-stroke: 0vw #383d52;
+        border-right: 2px solid #03a9f4 ;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+    } 
+ 
+body {
+    background-color:#252839;
+    /* color: black; */
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+/* h1 {
+    list-style: 1.4;
+    color: #fff;
+    animation-name: slide;
+    
+} */
+h1 {
+	list-style: 1.4;
+    color: #252839;
+        -webkit-text-stroke: 0.3vw #fff;
+        color: transparent;
+        transition: all 0.5s ease-in-out infinite alternate;
+        text-shadow: 2px 2px 10px ;
+	@media (max-width: 768px) {
+		font-size: 1.3em;
+	}
+}
+
+
+@keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+
+    }
+}
+
+
+
+.btn {
+    
+    color: black;
+    background:#03a9f4;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin: 20px;
+    border: 1px solid #03a9f4;
+    border-radius: 20px;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    font-size: 20px;;
+    cursor: pointer;
+    
+
+}
+
+.btn:hover {
+    opacity: 0.9;
+    /* background: transparent; */
+ 	border: 2px solid #fff;
+ 	color: #fff;
+ 	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+
+
+.btn:focus {
+    outline: 0;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5 ease-out;
+    background: linear-gradient(180deg, #383d52, 5%, #383d52, 50%, #030423);
+    
+
+}
+/* 
+screen1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5 ease-out;
+    animation: 3s linear 1s infinite running slidein;
+}
+@keyframes myAnimation {
+    0% {
+      width: 100px;
+    }
+    50% {
+      width: 300px;
+    }
+    100% {
+      width: 100px;
+    }
+  } */
+
+  
+  
+  
+  
+  
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.insect-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.insect-list li {
+    margin: 10px;
+}
+
+.choose-insect-btn {
+    
+    border: 2px solid #03a9f4;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+    
+}
+
+@-webkit-keyframes zoomInDown {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+    }
+    @keyframes zoomInDown {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+    } 
+  
+
+.choose-insect-btn:hover {
+    background-color:#383d52;
+    color: #fff;
+    transform: scale(1.5);
+    margin-right: 30px;
+    margin-top: 30px;
+
+}
+
+.choose-insect-btn:active {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(0.90)
+
+}
+
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+}
+
+.game-container {
+    position: relative;
+    color: #fff;
+}
+
+.time,
+.score {
+    position: absolute;
+    top: 20px;
+
+}
+
+.time {
+    left: 20px;
+}
+
+.score {
+    right: 20px;
+}
+
+.message {
+    line-height: 1.7;
+    background-color: rgba(0, 0, 0, 0.5);
+ 
+    padding: 40px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transfom 0.4s ease-in;
+
+
+}
+
+.message.visible {
+    
+    opacity: 1;
+    border: #03a9f4 2px solid;
+    border-radius: 20px;
+    color: #fff;
+    
+
+}
+
+
+.insect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transfom 0.3s ease-in-out;
+}
+
+
+.insect.caught {
+    transform: translate(-50%, -50%) scale(0);
+
+}
+
+.insect img {
+
+    height: 100px;
+    height: 100px;
+}
